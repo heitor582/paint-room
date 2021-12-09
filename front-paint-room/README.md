@@ -4,31 +4,19 @@ This project is a test for be BackEnd developer at Digital Republic
 
 ### Stack
 
--Angular 7+
+- Angular 7+
+- Material Design
 
 # Clone
 
 ```bash
 
-
-
 # Clone github project
-
-
 
 $ git clone https://gitlab.com/heitor582/digitalrepublictest.git
 
-
-
-
-
 # Enter the folder
-
-
-
 $ cd ./digitalRepublicTest/back-paint-room
-
-
 
 ```
 
