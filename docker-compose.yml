@@ -1,0 +1,29 @@
+version: "3.4"
+
+services:
+  backend:
+    build: ./back-paint-room
+    ports:
+      - 8080:8080
+    volumes:
+      - ./back-paint-room:/go/src/back-paint-room
+    environment:
+      - PORT=8080
+    networks:
+      - room-network
+  frontend:
+    build: ./front-paint-room
+    ports:
+     - 4200:4200
+    volumes:
+      - ./front-paint-room:/angular/src/front-paint-room
+    command: >
+        bash -c "npm install && ng serve --host 0.0.0.0 --port 4200"    
+    depends_on: 
+      - backend
+    networks:
+      - room-network
+
+networks: 
+  room-network:
+    driver: bridge
