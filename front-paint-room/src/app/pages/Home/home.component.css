@@ -1,0 +1,34 @@
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.result > label, li {
+  font-size: 20px;
+  margin: 5px;
+}
+.calculate {
+  background-color: #fff;
+  border-radius: 5px;
+  height: 70px;
+  margin: 20px;
+  font-size: 40px;
+}
+.error > label {
+  font-size: 20px;
+  margin: 5px;
+  color: #f00;
+}

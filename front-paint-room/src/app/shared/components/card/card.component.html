@@ -1,0 +1,22 @@
+<form [formGroup]="form" (ngSubmit)="nextCard()">
+  <h1>Wall {{ index + 1 }}</h1>
+  <mat-form-field appearance="legacy">
+    <mat-label>Height (meter)</mat-label>
+    <input matInput (change)="returnsNumber('height')" formControlName="height" />
+  </mat-form-field>
+  <mat-form-field appearance="legacy">
+    <mat-label>Width (meter)</mat-label>
+    <input matInput (change)="returnsNumber('width')" formControlName="width" />
+  </mat-form-field>
+  <mat-form-field appearance="legacy">
+    <mat-label>Number of doors</mat-label>
+    <input matInput (change)="returnsNumber('doorsNumber')" formControlName="doorsNumber" />
+  </mat-form-field>
+  <mat-form-field appearance="legacy">
+    <mat-label>Number of windowns</mat-label>
+    <input type="number" (change)="returnsNumber('windownsNumber')" matInput formControlName="windownsNumber" />
+  </mat-form-field>
+  <button [disabled]="form.invalid">
+    {{ form.enabled ? "Save" : "Edit" }}
+  </button>
+</form>

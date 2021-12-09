@@ -1,0 +1,21 @@
+<div class="body">
+  <div class="cards">
+    <app-card
+      *ngFor="let wall of [].constructor(numberOfWalls); let index = index"
+      [index]="index"
+      (next)="nextWall($event, index)"
+    ></app-card>
+  </div>
+  <button [disabled]="!submitEnable" (click)="getInfoAboutHowManyCans()" class="calculate">Calculate</button>
+  <div class="result" *ngIf="!!info">
+    <label>Total of Paitful Room Area: <b>{{ info.totalPaitfulRoomArea }} L</b></label>
+    <label>Total of Liters of paint: <b>{{ info.totalLitersOfCans }} L</b></label>
+    <ul>
+      <li *ngFor="let can of info.cans">{{ can.label }} : {{ can.quantity }} cans</li>
+    </ul>
+  </div>
+  <div class="error" *ngIf="errorMessage != ''">
+    <label>{{errorMessage}}</label>
+  </div>
+  <app-rules></app-rules>
+</div>

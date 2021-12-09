@@ -1,0 +1,9 @@
+.rules{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rules > label{
+  font-size: 20px;
+}
