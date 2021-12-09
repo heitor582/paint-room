@@ -16,7 +16,7 @@ func TestWallArea(t *testing.T) {
 	_, err = NewWall(1, 2, 15, 1)
 	assert.Nil(t, err)
 
-	_, err = NewWall(1, 0, 2, 1)
+	_, err = NewWall(1, 0, 2.2, 1)
 	assert.Nil(t, err)
 }
 
